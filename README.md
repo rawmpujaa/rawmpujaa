@@ -4,9 +4,9 @@
 - 👯 I’m looking to collaborate with other content creators.
 - 📋 2023 goals : learn more about programming
 
-# Praktikum Pemograman Berbasis Objek 
+### Praktikum Pemograman Berbasis Objek 
 - 📋 Jobsheet 1
   
-### Connect with me :
+#### Connect with me :
 
 -->
