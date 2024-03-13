@@ -1,0 +1,24 @@
+//menemukan pohon pencarian biner yang optimal dengan 
+pemograman dinamis
+//masukkan : larik P[1..n] dari probabilitas pencarian untuk 
+sebuah daftar terurut dari n kunci
+//keluaran : jumlah rata-rata perbandingan dalam pencarian 
+yang berhasil dalam
+// BTS optimal dan tabel R dari akar-akar subpohon dalam 
+BTS optimal
+for i  1 to n do
+C[i,i − 1]← 0 
+C[i,i]← P[i] 
+R[i,i]← i 
+C[n + 1, n]← 0 
+for d ← 1 to n − 1 do //diagonal count 
+for i ← 1 to n − d do
+j ← i + d 
+minval ← ∞ 
+for k ← i to j do
+if C[i, k − 1] + C[k + 1, j ] < minval
+minval ← C[i,k − 1] + C[k + 1, j ]; kmin ← k 
+R[i,j] ← kmin 
+sum ← P[i]; for s ← i + 1 to j do sum ← sum + P[s] 
+C[i,j]← minval + sum 
+return C[1,n], R
